@@ -1,0 +1,473 @@
+/* Author: Audree Hempelman */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Molle&family=Montserrat&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	padding:0;
+	background-color:var(--white);
+	margin: 0 auto;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+:root{
+	--yellow: #F6D64A;
+	--teal: #55BCD5;
+	--purple: #9B26B0;
+	--blue: #499BD2;
+	--dark-gray: #222222;
+	--light-gray: #EAEAEA;
+	--white: #FFFFFF;
+	--black: #000000;
+	font-family: 'Molle', cursive;
+	font-family: 'Montserrat', sans-serif;
+}
+.sr-only{
+	position:absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow:hidden;
+}
+#skip{
+	left:50%;
+	position:absolute;
+	transform: translateY(-100%);
+}
+header{
+	background-image: linear-gradient(var(--teal), var(--white));
+	padding: 40px;
+	margin-bottom:-30px;
+}
+header label{
+	background-color: var(--yellow);
+	font-weight: bold;
+	display: flex;
+	justify-content:center;
+	padding:10px;
+	padding-right:100px;
+	padding-left:100px;
+	cursor:pointer;
+}
+#menu-toggle{
+	margin-right:-40px;
+	margin-top:-190px;
+	text-transform:uppercase;
+}
+#menu-toggle label:hover{
+	background-color:var(--black);
+	color:var(--white);
+}
+#toggle{
+	display:none;
+}
+header img{
+	width: 150px;
+	margin-bottom: 25px;
+	margin-left: -25px;
+	margin-top: -25px;
+}
+header p{
+	font-size: 20px;
+}
+nav{
+	display:flex;
+	justify-content:right;
+}
+nav ul {
+	text-align:center;
+	display:none;
+}
+#menu-toggle:hover ul{
+	display:block;
+}
+nav li{
+	border:1px solid var(--black);
+	background-color: var(--teal);
+}
+nav a{
+	display:block;
+	padding: 1rem;
+	color: var(--black);
+	text-decoration: none;
+	font-weight: bold;
+}
+nav a:hover{
+	background-color:var(--black);
+	color:var(--white);
+}
+h1{
+	font-family: 'Molle', cursive;
+	font-size: 50px;
+}
+h2, h3{
+	font-family: 'Molle', cursive;
+	font-size: 40px;
+}
+h4{
+	font-weight: bold;
+	text-transform: uppercase;
+}
+h4, p, q, small, nav, button, form{
+	font-family: 'Montserrat', sans-serif;
+	line-height: 30px;
+}
+#main-content{
+	padding: 40px;
+}
+#img-grid{
+	margin: 0 auto;
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+	display:grid;
+	grid-template-rows: 1fr 1fr 1fr;
+	gap: 1rem;
+}
+#img-grid img{
+	width:400px;
+	height:300px;
+}
+#plan {
+	background-color: var(--yellow);
+	padding: 30px;
+	margin-bottom: 50px;
+}
+#plan div{
+	margin-top: 1rem;
+	display:grid;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+	gap: 1rem;
+}
+#plan section{
+	background-color: var(--teal);
+	margin: 0 auto;
+	width: 300px;
+	height: 280px;
+	padding: 1rem;
+	text-align:center;	
+	border-radius: 25px;
+	border: 4px solid var(--white);
+}
+#plan h4{
+	font-size: 25px;
+	padding-bottom:20px;
+}
+#testimonials h4{
+	font-size:30px;
+	text-align:center;
+}
+#testimonials p{
+	text-align:center;
+	font-size: 20px;
+}
+#testimonials div{
+	width: 300px;
+	height: 100%;
+	display:grid;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+	gap: 1rem;
+	align-items:center;
+	margin-top: 1rem;
+	margin-bottom:1rem;
+	margin: 0 auto;
+	margin-right: 780px;
+}
+#testimonials section{
+	margin-left:15px;
+	margin-right:15px;
+}
+#testimonials img{
+	display:flex;
+	margin: 0 auto;
+	padding: 10px;
+}
+#testimonials q::before, #testimonials q::after{
+	content: '"';
+}
+#testimonials q{
+	font-style:italic;
+	font-size:18px;
+	display:block;
+	text-align:center;
+}
+#about{
+	background-color:var(--blue);
+	padding: 30px;
+}
+#about div{
+	display:grid;
+	width: 300px;
+	grid-template-columns: 1fr 1fr;
+	margin: 0 auto;
+	text-align:center;
+}
+#about img{
+	display:flex;
+	margin: 0 auto;
+	width: 100px;
+	height: 100px;
+	padding: 10px;
+}
+#about h4, #about p{
+	font-size: 20px;
+}
+#contact{
+	margin-top:30px;
+	text-align:center;
+}
+#contact h3 span{
+	font-style:italic;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+}
+#contact form{
+	width:220px;
+	font-size: 20px;
+	font-weight:bold;
+	text-align:left;
+	justify-content:center;
+	text-transform:uppercase;
+	margin: 0 auto;
+	margin-top:1rem;
+}
+.required{
+	color:var(--purple);
+}
+#contact input{
+	border: 3px solid var(--purple);
+	font-size: 20px;
+	width: 320px;
+	height: 65px;
+	margin-bottom: 20px;
+	font-family: 'Montserrat', sans-serif;
+}
+fieldset label{
+	display:flex;
+	align-items:center;
+	margin-bottom:5px;
+	text-transform:capitalize;
+}
+input[type=radio]{
+	margin-left:-120px;
+	margin-right:-100px;
+	accent-color:var(--purple);
+}
+select{
+	width:320px;
+	height: 65px;
+	border: 3px solid var(--purple);
+	font-size: 20px;
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 20px;
+	cursor:pointer;
+}
+input[type=submit]{
+	background-color:var(--purple);
+	color:var(--white);
+	font-family: 'Montserrat', sans-serif;
+	text-transform:uppercase;
+	font-weight:bold;
+	justify-content:center;
+	margin-top:5px;
+	cursor:pointer;
+}
+footer{
+	background-color:var(--light-gray);
+	text-align:center;
+	display:block;
+	line-height: 40px;
+	color:var(--black);
+	padding:20px;
+	margin-top:-30px;
+}
+footer a{
+	display:block;
+	text-decoration:none;
+	color:var(--black);
+}
+@media (min-width: 768px){
+	#logo img{
+		float:left;
+		width:210px;
+		margin-top:0px;
+	}
+	#menu-toggle{
+		margin-top:-40px;
+		margin:0 auto;
+	}
+	#menu-toggle label{
+		position:absolute;
+		left: -10000px;
+		top: auto;
+		width: 1px;
+		height: 1px;
+		overflow:hidden;
+	}	
+	nav ul{
+		display:flex;
+		gap:1rem;
+		margin-top:2rem;
+	}
+	nav li{
+		background-color:var(--white);
+		border: none;
+		width:150px;
+	}
+	nav a:hover{
+		background-color:var(--yellow);
+		color:var(--black);
+	}
+	#img-grid{
+		display:grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+	#img-grid picture img{
+		width:700px;
+		grid-column: 1 / 3;
+		grid-row: 2;
+		justify-self: center;
+	}
+	#plan div{
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+	#testimonials div{
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		width: 1000px;
+	}
+	#about div{
+		display:flex;
+		margin:0 auto;
+		justify-content:center;
+	}
+	#about section{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	#contact form{
+		margin:0 auto;
+		margin-top:1rem;
+	}
+	fieldset{
+		display:flex;
+	}
+	footer{
+		display:flex;
+		margin:0;
+		justify-content:center;
+	}
+	footer p{
+		margin-right:40px;
+	}
+	footer a{
+		margin-right:40px;
+	}
+}
+@media (min-width: 1200px){
+	#intro{
+		width:800px;
+		margin-bottom:0px;
+	}
+	#intro h2, #intro p{
+		float:left;
+	}
+	#menu-toggle{
+		margin-right:-40px;
+		margin-top:-155px;
+	}
+	#plan div{
+		display:flex;
+	}
+	#testimonials div{
+		display:flex;
+		width: 1300px;
+		margin: 0 auto;
+	}
+	#contact h3{
+		text-align:left;
+		padding-left:5px;
+	}
+	#contact form{
+		display:flex;
+		justify-content:center;
+		margin-top:1rem;
+	}
+	#contact div{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	#contact input{
+		width: 400px;
+	}
+	select{
+		width: 400px;
+	}
+	#nums{
+		width: 450px;
+	}
+	input[type=radio]{
+		margin-right:-160px;
+		margin-left:-160px;
+	}
+	.radio-label{
+		margin-bottom:10px;
+	}
+	#contact input[type=submit]{
+		width: 200px;
+		float:right;
+	}
+	footer p{
+		margin:0;
+		padding-right:800px;
+	}
+	footer a{
+		padding-left:20px;
+		padding-right:20px;
+	}
+}
